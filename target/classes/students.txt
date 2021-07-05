@@ -1,0 +1,5 @@
+1,Manisha,Shah,Male,22
+2,Sangita,Shah,Female,23
+3,Gaurav,Shrestha,Male,23
+4,Anita,Joshi,Female,23
+
