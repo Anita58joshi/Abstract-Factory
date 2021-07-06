@@ -2,7 +2,7 @@ package com.anita.daily.adapter2.v2.external;
 
 import java.io.*;
 
-public class MyFileReader implements FileReader{
+public class MyFileReader implements FileReader {
 
     @Override
     public String[] read(){
@@ -10,8 +10,8 @@ public class MyFileReader implements FileReader{
         ClassLoader classLoader = getClass().getClassLoader();
         String[] lines = new String[1]; //
         try {
-            File file = new File(classLoader.getResource("students.txt").getFile());
-            java.io.FileReader fr = new java.io.FileReader(file); //read the file
+
+            java.io.FileReader fr = new java.io.FileReader("Resources/students.txt"); //read the file
             BufferedReader br = new BufferedReader(fr); //creates a buffering character input stream
 
             String line;
