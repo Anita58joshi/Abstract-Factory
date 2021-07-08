@@ -10,11 +10,9 @@ import java.util.List;
 @ToString
 @Setter
 public class JobDetail {
-
     private String companyImageUrl;
     private String title;
     private String company;
     private String companyAddress;
     private List<String> keySkills;
-
 }
