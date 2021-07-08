@@ -1,8 +1,5 @@
 package com.anita.daily.facade;
 
-
-
-
 import java.io.IOException;
 import java.util.List;
 
