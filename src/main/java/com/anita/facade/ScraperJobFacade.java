@@ -22,7 +22,7 @@ public class ScraperJobFacade {
                     allJobs.addAll(jobs);
                     exists = !jobs.isEmpty();
                 }else{
-                    break;
+                    exists = false;
                 }
             }
         }
