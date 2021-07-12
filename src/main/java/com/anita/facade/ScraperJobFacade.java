@@ -1,14 +1,13 @@
-package com.anita.daily.facade;
+package com.anita.facade;
 
 import org.jsoup.nodes.Document;
 
-import java.io.FileNotFoundException;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class JobScraperFacade {
-
-    public List<JobDetail> scrap(String site, String jobName) throws FileNotFoundException {
+public class ScraperJobFacade {
+    public List<JobDetail> scrap(String site, String jobName)  {
         List<JobDetail> allJobs = new ArrayList<>();
         if (site.equals("merojob")) {
             WebCaller webCaller = new WebCaller();
@@ -18,12 +17,12 @@ public class JobScraperFacade {
                 Document document = webCaller.call("https://merojob.com/search/?q=" + jobName + "&page=" + (i++));
                 if(document!=null)
                 {
-                    Scraper scraper = new MeroJobScraper();
+                    Scraper scraper = new ScraperMeroJob();
                     List<JobDetail> jobs = (List<JobDetail>) scraper.scrap(document);
                     allJobs.addAll(jobs);
                     exists = !jobs.isEmpty();
                 }else{
-                    exists = false;
+                    break;
                 }
             }
         }
@@ -31,4 +30,3 @@ public class JobScraperFacade {
         return allJobs;
     }
 }
-

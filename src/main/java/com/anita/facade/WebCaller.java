@@ -1,16 +1,15 @@
-package com.anita.daily.facade;
+package com.anita.facade;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-
-import java.io.IOException;
 
 public class WebCaller {
 
     public Document call(String website)  {
         try{
-           return Jsoup.connect(" website").get();
+            return Jsoup.connect(" website").get();
         }catch (Exception ex) {
+            System.out.println(ex);
         }
 
         return null;

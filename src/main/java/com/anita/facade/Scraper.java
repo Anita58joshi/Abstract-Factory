@@ -1,8 +1,9 @@
-package com.anita.daily.facade;
+package com.anita.facade;
 
 import org.jsoup.nodes.Document;
 
 public interface Scraper {
 
     Object scrap(Document document);
+
 }
