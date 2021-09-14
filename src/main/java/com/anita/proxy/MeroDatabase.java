@@ -1,0 +1,24 @@
+package com.anita.proxy;
+
+import java.util.List;
+
+public class MeroDatabase implements Database {
+
+    @Override
+    public String[] getDepositoryParticipant(){
+        System.out.println("Fetching participants from database");
+        try{
+            Thread.sleep(1000);
+        }catch (Exception e){
+
+        }
+        String[] participants = new String[3];
+        participants[0] = "ABC SECURITIES PRIVATE LIMITED";
+        participants[1] = "AGRAWAL SECURITIES PRIVATE LIMITED";
+        participants[2] = "AGRICULTURAL DEVELOPMENT BANK LIMITED";
+        System.out.println("Fetched participants from database");
+        return participants;
+
+    }
+
+}
