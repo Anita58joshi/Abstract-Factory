@@ -1,4 +1,4 @@
-package com.anita.generic;
+package com.anita.collectionsandgenerics;
 
 import java.util.Date;
 
@@ -10,5 +10,12 @@ public class Demo {
         softDoll.setCreatedBy(new NormalMember(1L));
         softDoll.setDescription("softdoll*******");
         softDoll.setCreatedDate(new Date());
+
+
+         MathCommand<Integer,Integer> addInteger = (x,y) -> x+y;
+
+        System.out.println(MathCommandStore.subDoubleCommand.calculate(3.0,2.0));
+        System.out.println(MathCommandStore.addDoubleCommand.calculate(3.0,2.0));
+
     }
 }

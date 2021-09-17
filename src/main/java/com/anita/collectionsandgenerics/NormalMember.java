@@ -1,12 +1,11 @@
-package com.anita.generic;
+package com.anita.collectionsandgenerics;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class NormalMember extends Member{
+public class NormalMember extends Member {
 
     private Double allowance;
 

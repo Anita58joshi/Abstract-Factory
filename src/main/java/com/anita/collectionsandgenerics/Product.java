@@ -1,4 +1,4 @@
-package com.anita.generic;
+package com.anita.collectionsandgenerics;
 
 import lombok.Getter;
 import lombok.Setter;
